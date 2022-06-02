@@ -12,6 +12,6 @@ export default function Weather(props) {
     axios.get(url).then(handleResponse);
 
     return (
-<InfinitySpin color="grey" />
+<InfinitySpin color="white" />
     )
 }
