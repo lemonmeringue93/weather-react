@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "./axios";
+import axios from "axios";
 
 export default function Form() {
   const [city, setCity] = useState("");
@@ -17,7 +17,7 @@ setWeather({
 
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=798023fb3d35165272c1fae40ceef0ea&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=798023fb3d35165272c1fae40ceef0ea&units=metric`;
     axios.get(url).then(displayWeather);
   }
 function updateCity(event) {
